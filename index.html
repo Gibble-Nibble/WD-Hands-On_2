@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <title>Hands-On 2</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./index.html">Panda</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hero Gallery
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./pages/hero-gallery/index.html" onclick="showPage(1)">Hero 1</a></li>
+                            <li><a href="./pages/hero-gallery/index.html" onclick="showPage(2)">Hero 2</a></li>
+                            <li><a href="./pages/hero-gallery/index.html" onclick="showPage(3)">Hero 3</a></li>
+                            <li><a href="./pages/hero-gallery/index.html" onclick="showPage(4)">Hero 4</a></li>
+                            <li><a href="./pages/hero-gallery/index.html" onclick="showPage(5)">Hero 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="cardGalleryDropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Card Gallery
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="test" href="#">Static</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(1)">Static Card 1</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(2)">Static Card 2</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(3)">Static Card 3</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(4)">Static Card 4</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(5)">Static Card 5</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test" href="#">Animated</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(6)">Static Card 1</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(7)">Static Card 2</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(8)">Static Card 3</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(9)">Static Card 4</a></li>
+                                    <li><a href="./pages/card-gallery/index.html" onclick="showPage(10)">Static Card 5</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="landing">
+            <h1>Hero & Card</h1>
+            <h2>Hands on 2</h2>
+            <p>
+                Welcome to the Hero & Card project, where we explore the dynamic interaction between heroes and cards in a web application. This project showcases various hero characters and interactive card designs, demonstrating modern web design techniques.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

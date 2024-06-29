@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../hero-gallery/assets/css/style.css">
+    <script src="../hero-gallery/assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Heroes</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Panda</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hero Gallery
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="showPage(1)">Hero 1</a></li>
+                            <li><a href="#" onclick="showPage(2)">Hero 2</a></li>
+                            <li><a href="#" onclick="showPage(3)">Hero 3</a></li>
+                            <li><a href="#" onclick="showPage(4)">Hero 4</a></li>
+                            <li><a href="#" onclick="showPage(5)">Hero 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="cardGalleryDropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Card Gallery
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="test" href="#">Static</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(1)">Static Card 1</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(2)">Static Card 2</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(3)">Static Card 3</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(4)">Static Card 4</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(5)">Static Card 5</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test" href="#">Animated</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(6)">Animated Card 1</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(7)">Animated Card 2</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(8)">Animated Card 3</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(9)">Animated Card 4</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage(10)">Animated Card 5</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Hero Page 1 -->
+        <div class="hero-container" id="hero-page-1">
+            <div class="hero" style="background-image: url('https://i.pinimg.com/564x/f9/74/25/f974253f0cb63054469f538875b0d382.jpg');">
+                <div class="hero-content">
+                    <h1>Hero 1</h1>
+                    <p>Simple image background with mask.</p>
+                    <div class="nav-buttons">
+                        <button onclick="showPage(2)">Next Hero</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Hero Page 2 -->
+        <div class="hero-container" id="hero-page-2" style="display: none;">
+            <div class="hero" style="background-image: url('https://i.pinimg.com/564x/b9/63/e2/b963e2ebefea90fdc1dd552a5e2fc74e.jpg');">
+                <div class="hero-content">
+                    <h1>Hero 2</h1>
+                    <p>Simple image background with gradient mask.</p>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="showPage(1)">Previous</button>
+                <button onclick="showPage(3)">Next</button>
+            </div>
+        </div>
+
+        <!-- Hero Page 3 -->
+        <div class="hero-container" id="hero-page-3" style="display: none;">
+            <div class="hero">
+                <video autoplay muted loop class="hero-video" id="hero-video">
+                    <source src="./assets/img/playlist.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Hero 3</h1>
+                    <p>Description of Hero 3.</p>
+                    <div class="action-buttons">
+                        <button onclick="showPage(2)">Previous</button>
+                        <button onclick="showPage(4)">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Page 4 (Interactive Storytelling) -->
+        <div class="hero-container" id="hero-page-4" style="display: none;">
+            <div class="hero interactive-storytelling">
+                <div class="hero-content">
+                    <h1>Hero 4</h1>
+                    <p>Interactive Storytelling</p>
+                    <a href="#" class="cta-button">Explore Now</a>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="showPage(3)">Previous</button>
+                <button onclick="showPage(5)">Next</button>
+            </div>
+        </div>
+
+
+        <!-- Hero Page 5 (Personalized Recommendation) -->
+        <div class="hero-container" id="hero-page-5" style="display: none;">
+            <div class="hero personalized-recommendation">
+                <div class="hero-content">
+                    <h1>Recommended pieces of art</h1>
+                    <div class="recommended-items">
+                        <!-- Example recommended items (replace with actual dynamic content if applicable) -->
+                        <div class="recommended-item">
+                            <img src="https://i.pinimg.com/564x/1a/2e/b3/1a2eb353ce2e70750d2027849f0f671d.jpg" alt="Recommended Item 1">
+                            <h3>Recommended Item 1</h3>
+                            <p>https://ph.pinterest.com/pin/3096293488783227/</p>
+                        </div>
+                        <div class="recommended-item">
+                            <img src="https://i.pinimg.com/564x/30/01/5a/30015a8566539143de8f73dc1b6262e7.jpg" alt="Recommended Item 2">
+                            <h3>Recommended Item 2</h3>
+                            <p>https://ph.pinterest.com/pin/140806232595170/</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="showPage(4)">Previous</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
