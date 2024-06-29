@@ -14,7 +14,7 @@
 <!-- TODO: Make a short description -->
 <div align="center">
   <p>In this project, I've compiled 5 Static and 5 Animated cards & 5 hero designs in a website.</p>
-  <a href="---">Click here to access the website</a>
+  <a href="https://gibble-nibble.github.io/WD-Hands-On_2/">Click here to access the website</a>
 </div>
 
 <br />
