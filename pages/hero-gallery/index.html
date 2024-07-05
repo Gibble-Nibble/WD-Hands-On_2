@@ -66,95 +66,87 @@
         </nav>
     </header>
 
-    <div class="container">
-        <!-- Hero Page 1 -->
-        <div class="hero-container" id="hero-page-1">
-            <div class="hero" style="background-image: url('https://i.pinimg.com/564x/f9/74/25/f974253f0cb63054469f538875b0d382.jpg');">
-                <div class="hero-content">
-                    <h1>Hero 1</h1>
-                    <p>Simple image background with mask.</p>
-                    <div class="nav-buttons">
-                        <button onclick="showPage(2)">Next Hero</button>
-                    </div>
-                </div>
+    <!-- Hero Section 1: Tech Startup -->
+    <section class="hero-tech-startup active">
+        <img autoplay muted loop class="hero-video" src="https://i.gifer.com/J4o.gif">
+        <div class="hero-content">
+            <h1>Revolutionize Your Workflow</h1>
+            <p>Discover how our innovative solutions can streamline your processes and boost productivity.</p>
+            <button class="cta">Get Started Now</button>
+            <div class="trust-badges">
+                <!-- Trust badges go here -->
             </div>
         </div>
+    </section>
 
-
-
-        <!-- Hero Page 2 -->
-        <div class="hero-container" id="hero-page-2" style="display: none;">
-            <div class="hero" style="background-image: url('https://i.pinimg.com/564x/b9/63/e2/b963e2ebefea90fdc1dd552a5e2fc74e.jpg');">
-                <div class="hero-content">
-                    <h1>Hero 2</h1>
-                    <p>Simple image background with gradient mask.</p>
-                </div>
-            </div>
-            <div class="nav-buttons">
-                <button onclick="showPage(1)">Previous</button>
-                <button onclick="showPage(3)">Next</button>
+    <!-- Hero Section 2: Health & Wellness Blog -->
+    <section class="hero-health-blog">
+        <img src="https://png.pngtree.com/thumb_back/fw800/background/20220915/pngtree-fantastical-natural-environment-a-highquality-digital-art-3d-render-for-wallpaper-photo-image_48286442.jpg" alt="Nature" class="hero-image">
+        <div class="hero-content">
+            <h1>Embrace a Healthier Lifestyle</h1>
+            <p>Your go-to source for wellness tips, healthy recipes, and fitness guides.</p>
+            <button class="cta">Read Our Blog</button>
+            <div class="featured-articles">
+                <!-- Featured articles go here -->
             </div>
         </div>
+    </section>
 
-        <!-- Hero Page 3 -->
-        <div class="hero-container" id="hero-page-3" style="display: none;">
-            <div class="hero">
-                <video autoplay muted loop class="hero-video" id="hero-video">
-                    <source src="./assets/img/playlist.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <h1>Hero 3</h1>
-                    <p>Description of Hero 3.</p>
-                    <div class="action-buttons">
-                        <button onclick="showPage(2)">Previous</button>
-                        <button onclick="showPage(4)">Next</button>
-                    </div>
-                </div>
+    <!-- Hero Section 3: E-commerce Fashion Store -->
+    <section class="hero-fashion-store">
+        <img src="https://melimeloshop.gr/wp-content/uploads/2023/01/New-Collection-Spring-Summer-2023-1.jpg" alt="Spring Collection" class="hero-image">
+        <div class="hero-content">
+            <h1>Spring Collection 2023</h1>
+            <p>Discover the latest trends and elevate your wardrobe with our new arrivals.</p>
+            <button class="cta">Shop Now</button>
+            <div class="featured-products">
+                <!-- Product carousel goes here -->
             </div>
         </div>
+    </section>
 
-        <!-- Hero Page 4 (Interactive Storytelling) -->
-        <div class="hero-container" id="hero-page-4" style="display: none;">
-            <div class="hero interactive-storytelling">
-                <div class="hero-content">
-                    <h1>Hero 4</h1>
-                    <p>Interactive Storytelling</p>
-                    <a href="#" class="cta-button">Explore Now</a>
-                </div>
-            </div>
-            <div class="nav-buttons">
-                <button onclick="showPage(3)">Previous</button>
-                <button onclick="showPage(5)">Next</button>
+    <!-- Hero Section 4: SaaS Company -->
+    <section class="hero-saas-company">
+        <img src="https://www.saasacademy.com/hs-fs/hubfs/shutterstock_1543490102.jpg?width=7500&name=shutterstock_1543490102.jpg" alt="Software Interface" class="hero-image">
+        <div class="hero-content">
+            <h1>Transform Your Business Operations</h1>
+            <p>Our all-in-one platform simplifies management, boosts productivity, and scales with your growth.</p>
+            <button class="cta">Start Your Free Trial</button>
+            <div class="customer-testimonials">
+                <!-- Testimonials go here -->
             </div>
         </div>
+    </section>
 
-
-        <!-- Hero Page 5 (Personalized Recommendation) -->
-        <div class="hero-container" id="hero-page-5" style="display: none;">
-            <div class="hero personalized-recommendation">
-                <div class="hero-content">
-                    <h1>Recommended pieces of art</h1>
-                    <div class="recommended-items">
-                        <!-- Example recommended items (replace with actual dynamic content if applicable) -->
-                        <div class="recommended-item">
-                            <img src="https://i.pinimg.com/564x/1a/2e/b3/1a2eb353ce2e70750d2027849f0f671d.jpg" alt="Recommended Item 1">
-                            <h3>Recommended Item 1</h3>
-                            <p>https://ph.pinterest.com/pin/3096293488783227/</p>
-                        </div>
-                        <div class="recommended-item">
-                            <img src="https://i.pinimg.com/564x/30/01/5a/30015a8566539143de8f73dc1b6262e7.jpg" alt="Recommended Item 2">
-                            <h3>Recommended Item 2</h3>
-                            <p>https://ph.pinterest.com/pin/140806232595170/</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Hero Section 5: Non-Profit Organization -->
+    <section class="hero-non-profit">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_UNICEF.svg/1200px-Flag_of_UNICEF.svg.png" alt="Community Help" class="hero-image">
+        <div class="hero-content">
+            <h1>Make a Difference Today</h1>
+            <p>Join us in our mission to provide clean water to communities in need.</p>
+            <div class="cta-buttons">
+                <button class="cta">Donate Now</button>
+                <button class="cta">Volunteer</button>
             </div>
-            <div class="nav-buttons">
-                <button onclick="showPage(4)">Previous</button>
+            <div class="impact-stats">
+                <!-- Impact statistics go here -->
             </div>
         </div>
-    </div>
+    </section>
+
+    <script>
+        function showPage(heroNumber) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            sections[heroNumber - 1].style.display = 'block';
+        }
+
+        // Initialize the first hero section as visible
+        document.addEventListener("DOMContentLoaded", function () {
+            showPage(1);
+        });
+    </script>
 </body>
 </html>

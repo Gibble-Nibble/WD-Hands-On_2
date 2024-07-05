@@ -68,421 +68,124 @@ body {
     display: block; /* Show submenu on hover */
 }
 
-.container {
-    padding-top: 20px;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.hero-container {
-    margin-bottom: 20px; /* Added margin between hero sections */
-    padding: 20px;
-    background-color: #282828; /* Dark background color */
-}
-
-.hero {
-    position: relative;
-    height: 400px; /* Adjust height as necessary */
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    overflow: hidden;
+.navbar {
+    margin-bottom: 0;
 }
 
 .hero-content {
-    position: relative;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-}
-
-/* CSS */
-.nav-buttons button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    appearance: none;
-    user-select: none;
-    white-space: nowrap;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 1;
-    text-align: center;
-    overflow: hidden;
-    outline: none;
-    border: 2px solid transparent;
-    padding: 10px 20px;
-    min-width: 120px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    
-    /* Text and background colors */
-    color: #FFFFFF; /* Text color */
-    background-color: transparent; /* Background color */
-    border-color: #4CAF50; /* Border color */
-}
-
-/* Hover effect */
-.nav-buttons button:hover {
-    background-color: transparent;
-}
-
-/* Click animation */
-@keyframes click-animation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.nav-buttons button:active {
-    animation: click-animation 0.3s ease-out;
-}
-
-/* Hero Page 1 specific styles */
-#hero-page-1 .hero {
-    height: 500px; /* Adjusted height for better visibility */
-    background-image: url('./assets/images/hero1.jpg'); /* Replace with your actual image path */
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
-
-#hero-page-1 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Gradient mask */
-    border-radius: 10px; /* Ensure mask follows border radius */
-}
-
-#hero-page-1 .hero-content {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #fff;
-    z-index: 1; /* Ensure content is above the mask */
-}
-
-#hero-page-1 h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#hero-page-1 p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 20px;
-}
-
-#hero-page-1 .nav-buttons {
-    margin-top: 20px;
-}
-
-#hero-page-1 .nav-buttons button {
-    min-width: 160px;
-    height: 50px;
-    font-size: 16px;
-    border: 2px solid #4CAF50;
-    background-color: transparent;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-#hero-page-1 .nav-buttons button:hover {
-    background-color: #4CAF50;
-}
-
-/* Click animation */
-@keyframes click-animation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-#hero-page-1 .nav-buttons button:active {
-    animation: click-animation 0.3s ease-out;
-}
-
-/* Hero Page 2 specific styles */
-#hero-page-2 .hero {
-    height: 500px; /* Adjusted height for better visibility */
-    background-image: url('./assets/images/hero2.jpg'); /* Replace with your actual image path */
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
-
-#hero-page-2 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
-                url('./assets/images/overlay-pattern.png'); /* Overlay pattern image */
-    background-blend-mode: overlay; /* Blend mode for the overlay */
-    border-radius: 10px; /* Ensure mask follows border radius */
-}
-
-#hero-page-2 .hero-content {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #fff;
-    z-index: 1; /* Ensure content is above the mask */
-}
-
-#hero-page-2 h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#hero-page-2 p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 20px;
-}
-
-#hero-page-2 .nav-buttons {
-    margin-top: 20px;
-}
-
-#hero-page-2 .nav-buttons button {
-    min-width: 160px;
-    height: 50px;
-    font-size: 16px;
-    border: 2px solid #4CAF50;; /* Custom border color */
-    background-color: transparent;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-#hero-page-2 .nav-buttons button:hover {
-    background-color: #4CAF50;; /* Custom hover background color */
-    border-color: #4CAF50; /* Custom hover border color */
-}
-
-/* Click animation */
-@keyframes click-animation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-#hero-page-2 .nav-buttons button:active {
-    animation: click-animation 0.3s ease-out;
-}
-
-/* Hero Page 3 specific styles */
-#hero-page-3 .hero {
-    position: relative;
-    height: 45vh; /* Full viewport height */
-    overflow: hidden;
-}
-
-#hero-page-3 .hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
+    text-align: center;
+    color: #fff;
 }
 
-#hero-page-3 .hero-overlay {
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.cta {
+    padding: 0.75em 1.5em;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+}
+
+.trust-badges,
+.featured-articles,
+.featured-products,
+.customer-testimonials,
+.impact-stats {
+    margin-top: 2em;
+}
+
+.hero-image,
+.hero-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.hero-tech-startup .hero-content,
+.hero-health-blog .hero-content,
+.hero-fashion-store .hero-content,
+.hero-saas-company .hero-content,
+.hero-non-profit .hero-content {
+    z-index: 2;
+}
+
+.hero-tech-startup::before,
+.hero-health-blog::before,
+.hero-fashion-store::before,
+.hero-saas-company::before,
+.hero-non-profit::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
-    z-index: 1; /* Ensure overlay is above video */
-}
-
-#hero-page-3 .hero-content {
-    position: relative;
-    z-index: 2; /* Ensure content is above overlay */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-#hero-page-3 h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-#hero-page-3 p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-#hero-page-3 .action-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-#hero-page-3 .action-buttons button {
-    min-width: 160px;
-    height: 50px;
-    font-size: 16px;
-    border: 2px solid #4CAF50;; /* Custom border color */
-    background-color: transparent;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-#hero-page-3 .action-buttons button:hover {
-    background-color: #45a049;
-}
-
-#hero-page-3 .action-buttons button:focus {
-    outline: none;
-}
-
-#hero-page-3 .action-buttons button:active {
-    transform: translateY(1px);
-}
-
-/* CSS for Interactive Storytelling Hero Section */
-.interactive-storytelling {
-    background-image: url('./assets/images/hero4.jpg'); /* Adjust path as necessary */
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-}
-
-.interactive-storytelling .hero-content {
-    position: relative;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-.interactive-storytelling h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.interactive-storytelling p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.interactive-storytelling .cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #45a049;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-.interactive-storytelling .cta-button:hover {
-    background-color: #45a049;
-}
-
-/* CSS for Personalized Recommendation Hero Section */
-.personalized-recommendation {
-    background-image: url('./assets/images/hero5.jpg'); /* Adjust path as necessary */
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #333;
+/* Specific hero sections */
+.hero-tech-startup {
     position: relative;
+    background: url('tech-product-demo.mp4') no-repeat center center/cover;
 }
 
-.personalized-recommendation .hero-content {
-    max-width: 80%;
-    margin: 0 auto;
+.hero-health-blog {
+    position: relative;
+    background: url('peaceful-nature.jpg') no-repeat center center/cover;
 }
 
-.personalized-recommendation h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+.hero-fashion-store {
+    position: relative;
+    background: url('spring-collection.jpg') no-repeat center center/cover;
 }
 
-.personalized-recommendation .recommended-items {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+.hero-saas-company {
+    position: relative;
+    background: url('software-interface.jpg') no-repeat center center/cover;
 }
 
-.personalized-recommendation .recommended-item {
-    flex: 1;
-    background-color: #353535;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
+.hero-non-profit {
+    position: relative;
+    background: url('community-help.jpg') no-repeat center center/cover;
 }
 
-.personalized-recommendation .recommended-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+/* Ensure all hero sections are hidden by default */
+section {
+    display: none;
 }
 
-.personalized-recommendation .recommended-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+/* Override to show active hero section */
+section.active {
+    display: block;
 }
 
-.personalized-recommendation .recommended-item p {
-    font-size: 1rem;
-}
