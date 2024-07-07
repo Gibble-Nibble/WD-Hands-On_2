@@ -1,3 +1,5 @@
+
+// For dropdowns
 $(document).ready(function(){
     // Function to close all dropdowns except the one clicked
     $('.dropdown-submenu a.test').on("click", function(e){
@@ -17,16 +19,16 @@ $(document).ready(function(){
     });
 });
 
-function showPage(pageNumber) {
-    // Hide all hero containers
-    var heroContainers = document.querySelectorAll('.hero-container');
-    heroContainers.forEach(function(container) {
-        container.style.display = 'none';
+// For switching pages
+function showPage(heroNumber) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.style.display = 'none';
     });
-
-    // Show the selected hero container
-    var selectedHero = document.getElementById('hero-page-' + pageNumber);
-    if (selectedHero) {
-        selectedHero.style.display = 'block';
-    }
+    sections[heroNumber - 1].style.display = 'block';
 }
+
+// Initialize the first hero section as visible
+document.addEventListener("DOMContentLoaded", function () {
+    showPage(1);
+});

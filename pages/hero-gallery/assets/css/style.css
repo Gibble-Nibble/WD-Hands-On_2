@@ -1,3 +1,4 @@
+/* Existing CSS */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -80,105 +81,6 @@ body {
     margin-bottom: 0;
 }
 
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-}
-
-.hero-content p {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-}
-
-.cta {
-    padding: 0.75em 1.5em;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta:hover {
-    background-color: #0056b3;
-}
-
-.trust-badges,
-.featured-articles,
-.featured-products,
-.customer-testimonials,
-.impact-stats {
-    margin-top: 2em;
-}
-
-.hero-image,
-.hero-video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: relative;
-}
-
-.hero-tech-startup .hero-content,
-.hero-health-blog .hero-content,
-.hero-fashion-store .hero-content,
-.hero-saas-company .hero-content,
-.hero-non-profit .hero-content {
-    z-index: 2;
-}
-
-.hero-tech-startup::before,
-.hero-health-blog::before,
-.hero-fashion-store::before,
-.hero-saas-company::before,
-.hero-non-profit::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-/* Specific hero sections */
-.hero-tech-startup {
-    position: relative;
-    background: url('tech-product-demo.mp4') no-repeat center center/cover;
-}
-
-.hero-health-blog {
-    position: relative;
-    background: url('peaceful-nature.jpg') no-repeat center center/cover;
-}
-
-.hero-fashion-store {
-    position: relative;
-    background: url('spring-collection.jpg') no-repeat center center/cover;
-}
-
-.hero-saas-company {
-    position: relative;
-    background: url('software-interface.jpg') no-repeat center center/cover;
-}
-
-.hero-non-profit {
-    position: relative;
-    background: url('community-help.jpg') no-repeat center center/cover;
-}
-
 /* Ensure all hero sections are hidden by default */
 section {
     display: none;
@@ -189,3 +91,167 @@ section.active {
     display: block;
 }
 
+/* New Hero Section CSS with Scoped Class Names */
+.hero1-container {
+    width: 100%;
+}
+
+.hero1-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hero1-logo {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.hero1-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.hero1-nav-links li {
+    display: inline;
+}
+
+.hero1-nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.hero1-nav-links a:hover {
+    color: #ae00ff;
+}
+
+.hero1 {
+    background: url('../img/bg_hero1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero1-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero1 h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero1 p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: slideIn 1.5s ease-out;
+}
+
+.hero1 .btn {
+    padding: 10px 30px;
+    background: #b21cd8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.hero1 .btn:hover {
+    background: #58036d;
+}
+
+.hero1 .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+    transform: translateX(-50%);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero1 h1 {
+        font-size: 3rem;
+    }
+
+    .hero1 p {
+        font-size: 1.2rem;
+    }
+
+    .hero1 .btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .hero1-navbar {
+        padding: 10px 20px;
+    }
+
+    .hero1-nav-links {
+        display: none;
+    }
+}

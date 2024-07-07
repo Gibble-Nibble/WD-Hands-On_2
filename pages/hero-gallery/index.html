@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../hero-gallery/assets/css/style.css">
+    <link rel="stylesheet" href="hero1.css"> <!-- Link to the hero section CSS file -->
     <script src="../hero-gallery/assets/js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -66,87 +67,27 @@
         </nav>
     </header>
 
-    <!-- Hero Section 1: Tech Startup -->
-    <section class="hero-tech-startup active">
-        <img autoplay muted loop class="hero-video" src="https://i.gifer.com/J4o.gif">
-        <div class="hero-content">
-            <h1>Revolutionize Your Workflow</h1>
-            <p>Discover how our innovative solutions can streamline your processes and boost productivity.</p>
-            <button class="cta">Get Started Now</button>
-            <div class="trust-badges">
-                <!-- Trust badges go here -->
+    <!-- Hero 1 Section -->
+    <div class="hero1-container">
+        <header>
+            <nav class="hero1-navbar">
+                <div class="hero1-logo">PandArt</div>
+                <ul class="hero1-nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero1">
+            <div class="hero1-content">
+                <h1>Unleash Your Potential</h1>
+                <p>Join PandArt to explore new heights and achieve your dreams.</p>
+                <a href="#get-started" class="btn">Get Started</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Hero Section 2: Health & Wellness Blog -->
-    <section class="hero-health-blog">
-        <img src="https://png.pngtree.com/thumb_back/fw800/background/20220915/pngtree-fantastical-natural-environment-a-highquality-digital-art-3d-render-for-wallpaper-photo-image_48286442.jpg" alt="Nature" class="hero-image">
-        <div class="hero-content">
-            <h1>Embrace a Healthier Lifestyle</h1>
-            <p>Your go-to source for wellness tips, healthy recipes, and fitness guides.</p>
-            <button class="cta">Read Our Blog</button>
-            <div class="featured-articles">
-                <!-- Featured articles go here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Section 3: E-commerce Fashion Store -->
-    <section class="hero-fashion-store">
-        <img src="https://melimeloshop.gr/wp-content/uploads/2023/01/New-Collection-Spring-Summer-2023-1.jpg" alt="Spring Collection" class="hero-image">
-        <div class="hero-content">
-            <h1>Spring Collection 2023</h1>
-            <p>Discover the latest trends and elevate your wardrobe with our new arrivals.</p>
-            <button class="cta">Shop Now</button>
-            <div class="featured-products">
-                <!-- Product carousel goes here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Section 4: SaaS Company -->
-    <section class="hero-saas-company">
-        <img src="https://www.saasacademy.com/hs-fs/hubfs/shutterstock_1543490102.jpg?width=7500&name=shutterstock_1543490102.jpg" alt="Software Interface" class="hero-image">
-        <div class="hero-content">
-            <h1>Transform Your Business Operations</h1>
-            <p>Our all-in-one platform simplifies management, boosts productivity, and scales with your growth.</p>
-            <button class="cta">Start Your Free Trial</button>
-            <div class="customer-testimonials">
-                <!-- Testimonials go here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Section 5: Non-Profit Organization -->
-    <section class="hero-non-profit">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_UNICEF.svg/1200px-Flag_of_UNICEF.svg.png" alt="Community Help" class="hero-image">
-        <div class="hero-content">
-            <h1>Make a Difference Today</h1>
-            <p>Join us in our mission to provide clean water to communities in need.</p>
-            <div class="cta-buttons">
-                <button class="cta">Donate Now</button>
-                <button class="cta">Volunteer</button>
-            </div>
-            <div class="impact-stats">
-                <!-- Impact statistics go here -->
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function showPage(heroNumber) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            sections[heroNumber - 1].style.display = 'block';
-        }
-
-        // Initialize the first hero section as visible
-        document.addEventListener("DOMContentLoaded", function () {
-            showPage(1);
-        });
-    </script>
+            <div class="scroll-indicator"></div>
+        </section>
+    </div>
 </body>
 </html>
