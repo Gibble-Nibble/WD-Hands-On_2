@@ -10,7 +10,6 @@
     <script src="../hero-gallery/assets/js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <title>Heroes</title>
 </head>
 
@@ -28,11 +27,11 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" onclick="showPage(1)">Hero 1</a></li>
-                            <li><a href="#" onclick="showPage(2)">Hero 2</a></li>
-                            <li><a href="#" onclick="showPage(3)">Hero 3</a></li>
-                            <li><a href="#" onclick="showPage(4)">Hero 4</a></li>
-                            <li><a href="#" onclick="showPage(5)">Hero 5</a></li>
+                            <li><a href="#" class="hero-link" data-index="1">Hero 1</a></li>
+                            <li><a href="#" class="hero-link" data-index="2">Hero 2</a></li>
+                            <li><a href="#" class="hero-link" data-index="3">Hero 3</a></li>
+                            <li><a href="#" class="hero-link" data-index="4">Hero 4</a></li>
+                            <li><a href="#" class="hero-link" data-index="5">Hero 5</a></li>
                         </ul>
                     </li>
                     <li class="dropdown" id="cardGalleryDropdown">
@@ -68,7 +67,7 @@
     </header>
 
     <!-- Hero 1 Section -->
-    <div class="hero1-container">
+    <div class="hero1-container hero-section active">
         <header>
             <nav class="hero1-navbar">
                 <div class="hero1-logo">PandArt</div>
@@ -89,5 +88,51 @@
             <div class="scroll-indicator"></div>
         </section>
     </div>
+
+    <!-- Hero 2 Section -->
+    <div class="hero2-container hero-section">
+        <section class="hero2">
+            <div class="hero2-content">
+                <h1>Welcome to Our World</h1>
+                <p>Discover the magic of creativity and innovation.</p>
+                <a href="#explore" class="btn">Explore Now</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Hero 3 Section -->
+    <div class="hero3-container hero-section">
+        <section class="hero3">
+            <div class="hero3-content">
+                <h1>Explore the Unknown</h1>
+                <p>Embark on a journey to discover new possibilities.</p>
+                <a href="#discover" class="btn">Discover More</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Hero 4 Section -->
+    <div class="hero4-container hero-section">
+        <section class="hero4">
+            <div class="hero4-overlay"></div>
+            <div class="hero4-content">
+                <h1>Join the Revolution</h1>
+                <p>Transform your ideas into reality with us.</p>
+                <a href="#join" class="btn">Join Now</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Hero 5 Section -->
+    <div class="hero5-container hero-section">
+        <section class="hero5">
+            <div class="hero5-content">
+                <h1>Embrace Your Passion</h1>
+                <p>Ignite your creativity and achieve greatness.</p>
+                <a href="#passion" class="btn">Explore Passion</a>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

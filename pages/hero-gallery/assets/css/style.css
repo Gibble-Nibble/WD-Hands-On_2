@@ -1,97 +1,89 @@
-/* Existing CSS */
+/* General Body Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #2c2c2c;
-    background-color: #1d1d1d;
-    margin: 0;
+font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+line-height: 1.6;
+color: #2c2c2c;
+background-color: #1d1d1d;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
 }
 
+/* Navbar Styles */
 .navbar {
-    background-color: #141414;
-    border: none;
-    border-radius: 0;
-    color: #dcdcdc;
-    font-size: 16px;
-    padding: 20px 0;
+background-color: #141414;
+border: none;
+border-radius: 0;
+color: #dcdcdc;
+font-size: 16px;
+padding: 20px 0;
+margin-bottom: 0;
 }
 
 .navbar-brand {
-    color: #fff;
-    font-style: italic;
-    margin-right: 20px;
-    font-size: 24px;
+color: #fff;
+font-style: italic;
+margin-right: 20px;
+font-size: 24px;
 }
 
 .navbar-nav > li > .dropdown > .dropdown-toggle {
-    color: #dcdcdc;
-    margin-right: 15px;
+color: #dcdcdc;
+margin-right: 15px;
 }
 
 .navbar-nav > li > .dropdown > .dropdown-toggle:hover,
 .navbar-nav > li > .dropdown > .dropdown-toggle:focus {
-    background-color: #282828;
+background-color: #282828;
 }
 
 /* Remove Bootstrap caret */
 .navbar-nav > li > .dropdown > .dropdown-toggle::after {
-    display: none !important;
+display: none !important;
 }
 
 .dropdown-menu {
-    background-color: #141414;
-    border: none;
+background-color: #141414;
+border: none;
 }
 
 .dropdown-menu > li > a {
-    color: #dcdcdc;
+color: #dcdcdc;
 }
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-    background-color: #282828;
-    color: #fff;
+background-color: #282828;
+color: #fff;
 }
 
 .dropdown-submenu {
-    position: relative;
+position: relative;
 }
 
 .dropdown-submenu > .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -1px;
-    display: none; /* Initially hide submenu */
+top: 0;
+left: 100%;
+margin-top: -1px;
+display: none; /* Initially hide submenu */
 }
 
 .dropdown-submenu:hover > .dropdown-menu {
     display: block; /* Show submenu on hover */
 }
 
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-.navbar {
-    margin-bottom: 0;
-}
-
 /* Ensure all hero sections are hidden by default */
-section {
+.hero-section {
     display: none;
 }
 
 /* Override to show active hero section */
-section.active {
+.hero-section.active {
     display: block;
 }
 
-/* New Hero Section CSS with Scoped Class Names */
+/* Hero 1 Styles */
 .hero1-container {
     width: 100%;
 }
@@ -104,7 +96,7 @@ section.active {
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .hero1-logo {
