@@ -16,16 +16,18 @@ $(document).ready(function() {
         }
     });
 
-    $(document).ready(function() {
-        // Initially hide all hero sections except the active one
-        $('.hero-section').not('.active').hide();
+    // Initially hide all sections except the active one
+    $('.section').not('.active').hide();
 
-        // Handle click event for hero gallery links
-        $('.hero-link').click(function(e) {
-            e.preventDefault();
-            var index = $(this).data('index');
-            $('.hero-section').removeClass('active').hide();
-            $('.hero-section:nth-child(' + index + ')').addClass('active').fadeIn();
-        });
-    });
+    // Handle click event for hero and card gallery links
+    function showPage(sectionId) {
+        $('.section').removeClass('active').hide();
+        $('#' + sectionId).addClass('active').fadeIn();
+    }
+
+    window.showPage = showPage;
+
+    
 });
+
+

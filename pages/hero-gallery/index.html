@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../hero-gallery/assets/css/style.css">
-    <link rel="stylesheet" href="hero1.css"> <!-- Link to the hero section CSS file -->
-    <script src="../hero-gallery/assets/js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Heroes</title>
 </head>
 
@@ -18,23 +14,23 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Panda</a>
+                    <a class="navbar-brand" href="../../index.html" onclick="showPage('home')">Panda</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html" onclick="showPage('home')">Home</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hero Gallery
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" class="hero-link" data-index="1">Hero 1</a></li>
-                            <li><a href="#" class="hero-link" data-index="2">Hero 2</a></li>
-                            <li><a href="#" class="hero-link" data-index="3">Hero 3</a></li>
-                            <li><a href="#" class="hero-link" data-index="4">Hero 4</a></li>
-                            <li><a href="#" class="hero-link" data-index="5">Hero 5</a></li>
+                            <li><a href="#" onclick="showPage('hero1')">Hero 1</a></li>
+                            <li><a href="#" onclick="showPage('hero2')">Hero 2</a></li>
+                            <li><a href="#" onclick="showPage('hero3')">Hero 3</a></li>
+                            <li><a href="#" onclick="showPage('hero4')">Hero 4</a></li>
+                            <li><a href="#" onclick="showPage('hero5')">Hero 5</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown" id="cardGalleryDropdown">
+                    <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Card Gallery
                             <span class="caret"></span>
                         </a>
@@ -42,21 +38,21 @@
                             <li class="dropdown-submenu">
                                 <a class="test" href="#">Static</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(1)">Static Card 1</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(2)">Static Card 2</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(3)">Static Card 3</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(4)">Static Card 4</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(5)">Static Card 5</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardStatic1')">Static Card 1</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardStatic2')">Static Card 2</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardStatic3')">Static Card 3</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardStatic4')">Static Card 4</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardStatic5')">Static Card 5</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
                                 <a class="test" href="#">Animated</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(6)">Animated Card 1</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(7)">Animated Card 2</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(8)">Animated Card 3</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(9)">Animated Card 4</a></li>
-                                    <li><a href="../card-gallery/index.html" onclick="showPage(10)">Animated Card 5</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardAnimated1')">Animated Card 1</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardAnimated2')">Animated Card 2</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardAnimated3')">Animated Card 3</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardAnimated4')">Animated Card 4</a></li>
+                                    <li><a href="../card-gallery/index.html" onclick="showPage('cardAnimated5')">Animated Card 5</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -66,8 +62,8 @@
         </nav>
     </header>
 
-    <!-- Hero 1 Section -->
-    <div class="hero1-container hero-section active">
+    <!-- Hero Sections -->
+    <div id="hero1" class="hero-section section active">
         <header>
             <nav class="hero1-navbar">
                 <div class="hero1-logo">PandArt</div>
@@ -82,57 +78,95 @@
         <section class="hero1">
             <div class="hero1-content">
                 <h1>Unleash Your Potential</h1>
-                <p>Join PandArt to explore new heights and achieve your dreams.</p>
+                <p>Image background with animated elements.</p>
                 <a href="#get-started" class="btn">Get Started</a>
             </div>
             <div class="scroll-indicator"></div>
         </section>
     </div>
 
-    <!-- Hero 2 Section -->
-    <div class="hero2-container hero-section">
+    <div id="hero2" class="hero-section section">
         <section class="hero2">
+            <div class="video-container">
+                <video autoplay muted loop id="video-background">
+                    <source src="./assets/img/panda.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="gradient-mask"></div>
+            </div>
             <div class="hero2-content">
-                <h1>Welcome to Our World</h1>
-                <p>Discover the magic of creativity and innovation.</p>
+                <h1>Welcome to PandArt</h1>
+                <p>Video backround with gradient mask.</p>
                 <a href="#explore" class="btn">Explore Now</a>
             </div>
         </section>
     </div>
 
-    <!-- Hero 3 Section -->
-    <div class="hero3-container hero-section">
+    <div id="hero3" class="hero-section section">
         <section class="hero3">
             <div class="hero3-content">
-                <h1>Explore the Unknown</h1>
-                <p>Embark on a journey to discover new possibilities.</p>
-                <a href="#discover" class="btn">Discover More</a>
+                <div class="hero3-text">
+                    <h1>Welcome to PandArt</h1>
+                    <p>Simple static hero section with gradient background.</p>
+                    <a href="#explore" class="btn">Start Creating</a>
+                </div>
             </div>
         </section>
-    </div>
+    </div>    
 
     <!-- Hero 4 Section -->
-    <div class="hero4-container hero-section">
+    <div id="hero4" class="hero4-container hero-section section">
         <section class="hero4">
-            <div class="hero4-overlay"></div>
-            <div class="hero4-content">
-                <h1>Join the Revolution</h1>
-                <p>Transform your ideas into reality with us.</p>
-                <a href="#join" class="btn">Join Now</a>
+            <!-- Left side with login form -->
+            <div class="hero4-left">
+                <div class="hero4-login">
+                    <h2>Login to Your Account</h2>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <p>Don't have an account? <a href="#create-account">Create one now!</a></p>
+                </div>
+            </div>
+
+            <!-- Right side with text promoting membership -->
+            <div class="hero4-right">
+                <div class="hero4-content">
+                    <h1>Become a Member Today</h1>
+                    <p>Unlock a world of benefits by joining our community. Get access to premium features, exclusive content, and more!</p>
+                    <a href="#join" class="btn btn-secondary">Join Now</a>
+                </div>
             </div>
         </section>
     </div>
 
-    <!-- Hero 5 Section -->
-    <div class="hero5-container hero-section">
+
+    <div id="hero5" class="hero-section section">
         <section class="hero5">
-            <div class="hero5-content">
-                <h1>Embrace Your Passion</h1>
-                <p>Ignite your creativity and achieve greatness.</p>
-                <a href="#passion" class="btn">Explore Passion</a>
+            <div class="hero5-left">
+                <h1>This panda is brought to you by... Raid: Shadow Legends</h1>
+                <p>An asymmetrical design.</p>
+                <a href="#explore" class="btn btn-primary">Explore Now</a>
+            </div>
+            <div class="hero5-right">
+                <div class="hero5-image">
+                    <img src="./assets/img/panda.jpg" alt="Panda Image">
+                </div>
             </div>
         </section>
     </div>
-</body>
+    
+    
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</body>
 </html>
