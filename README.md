@@ -118,7 +118,9 @@ WD-Hands-On_2
 |     |  └─ css
 |     |  |  └─ style.css
 |     |  └─ img
-|     |      └─ playlist.mp4
+|     |      └─ bg_hero1.jpg
+|     |      └─ panda.mp4
+|     |      └─ panda.jpg
 |     |  |
 |     |  └─ js
 |     |     └─ script.js
