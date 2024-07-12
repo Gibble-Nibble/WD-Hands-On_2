@@ -1,3 +1,5 @@
+/* style.css */
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -68,344 +70,128 @@ body {
     display: block; /* Show submenu on hover */
 }
 
-.container {
-    padding-top: 20px;
-}
+/* Card Gallery Styles */
 
-.card-container {
-    margin-bottom: 20px; /* Added margin between hero sections */
+.container {
+    max-width: 1200px;
+    max-height: 500px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #282828; /* Dark background color */
 }
 
 .card {
-    position: relative;
-    height: 400px; /* Adjust height as necessary */
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    max-height: 500px;
 }
 
 .card-content {
-    position: relative;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-}
-
-/* CSS */
-.nav-buttons button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    appearance: none;
-    user-select: none;
-    white-space: nowrap;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 1;
-    text-align: center;
-    overflow: hidden;
-    outline: none;
-    border: 2px solid transparent;
-    padding: 10px 20px;
-    min-width: 120px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-
-    /* Text and background colors */
-    color: #FFFFFF; /* Text color */
-    background-color: transparent; /* Background color */
-    border-color: #4CAF50; /* Border color */
-}
-
-/* Hover effect */
-.nav-buttons button:hover {
-    background-color: transparent;
-}
-
-/* Click animation */
-@keyframes click-animation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.nav-buttons button:active {
-    animation: click-animation 0.3s ease-out;
-}
-
-/*Static Cards*/
-
-/* Styles for Card 1 */
-#card-page-1 .card {
-    position: relative;
-    align-self: center;
-    height: 400px; /* Adjust height as needed */
-    width: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 35px;
-}
-
-#card-page-1 .card-content {
-    width: 250px;
-    height: 100px;
-    position: absolute;
-    color: #fff;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text */
-    padding: 10px 20px;
-    border-radius: 4px;
-}
-
-#card-page-1 .card-content h1 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    transform: translateY(-30%);
-}
-
-#card-page-1 .card-content p {
-    font-size: 12px;
-    transform: translateY(-20%);
-}
-
-
-/* Styles for Card 2 */
-#card-page-2 .card {
-    position: relative;
-    height: 400px; /* Adjust height as needed */
-    width: 300px; /* Fixed width for consistent card size */
-    margin: auto; /* Center horizontally */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    background:
-        linear-gradient(to bottom, rgba(0, 247, 255, 0.3), rgba(0, 0, 0, 0.9)),
-        url('https://i.pinimg.com/564x/30/01/5a/30015a8566539143de8f73dc1b6262e7.jpg');
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 35px;
-}
-
-#card-page-2 .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     padding: 20px;
-    box-sizing: border-box;
-    background-color: transparent; /* Remove semi-transparent background */
-    border-radius: 0 0 8px 8px; /* Rounded corners only at the bottom */
-    color: #fff;
+    flex: 1;
 }
 
-#card-page-2 .card-content h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-#card-page-2 .card-content p {
-    font-size: 14px;
-    margin-bottom: 0;
-    line-height: 1.6;
-}
-
-/* Styles for Card 3 */
-#card-page-3 .card {
-    position: relative;
-    height: 400px; /* Adjust height as needed */
-    width: 300px; /* Fixed width for consistent card size */
-    margin: auto; /* Center horizontally */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    background: 
-        linear-gradient(to bottom, rgba(240, 0, 0, 0.3), rgba(1, 0, 44, 0.7)),
-        url('https://i.pinimg.com/564x/6a/33/00/6a3300f3c7645f54c073bb691616c495.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#card-page-3 .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: transparent; /* Remove semi-transparent background */
-    border-radius: 0 0 8px 8px; /* Rounded corners only at the bottom */
-    color: #fff;
-}
-
-#card-page-3 .card-content h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-#card-page-3 .card-content p {
-    font-size: 14px;
-    margin-bottom: 0;
-    line-height: 1.6;
-}
-
-/* Styles for Card 4 */
-#card-page-4 .card-container {
-    width: 300px; /* Example width */
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-#card-page-4 .card {
-    background-color: rgb(56, 56, 56);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 35px;
-}
-
-#card-page-4 .card-content {
-    text-align: center;
-}
-
-#card-page-4 h1 {
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-#card-page-4 p {
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 1.5;
-}
-
-#card-page-5 .card {
-    height: 400px; /* Adjust height as needed */
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#card-page-5 .card-content {
-    padding: 20px;
-    text-align: center;
-    color: #fff; /* Text color for contrast */
-}
-
-#card-page-5 h1 {
+.card h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-#card-page-5 p {
+.card p {
     font-size: 16px;
-    line-height: 1.5;
+    color: #555;
 }
 
+.card img {
+    display: block;
+}
 
-    /* Animation for Card Page 6 */
-    #card-page-6 .card {
-        animation: slideInLeft 0.5s ease-out;
-    }
+.card .btn {
+    margin-top: 10px;
+}
 
-    @keyframes slideInLeft {
-        from {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
+.card-right {
+    display: flex;
+    flex-direction: row-reverse; /* Image on the right, content on the left */
+}
 
-    /* Animation for Card Page 7 */
-    #card-page-7 .card {
-        animation: slideInRight 0.5s ease-out;
-    }
+.card-left {
+    display: flex;
+    flex-direction: row; /* Image on the left, content on the right */
+}
 
-    @keyframes slideInRight {
-        from {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
+.card-full {
+    display: flex;
+    flex-direction: column;
+}
 
-    /* Animation for Card Page 8 */
-    #card-page-8 .card {
-        animation: fadeInScale 0.5s ease-out;
-    }
+/* Unique Styles for Each Card */
 
-    @keyframes fadeInScale {
-        from {
-            transform: scale(0.5);
-            opacity: 0;
-        }
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
+.card-unique-1 {
+    background-color: #c2c2c2;
+}
 
-    /* Animation for Card Page 9 */
-    #card-page-9 .card {
-        animation: rotateIn 0.5s ease-out;
-    }
+.card-unique-1 .card-content {
+    color: #000;
+}
 
-    @keyframes rotateIn {
-        from {
-            transform: rotate(-180deg);
-            opacity: 0;
-        }
-        to {
-            transform: rotate(0);
-            opacity: 1;
-        }
-    }
+.card-unique-1 img {
+    border-radius: 50%;
+    margin: 20px;
+}
 
-    /* Animation for Card Page 10 */
-    #card-page-10 .card {
-        animation: flipInY 0.5s ease-out;
-    }
+.card-unique-2 {
+    background-color: #2c2c2c;
+}
 
-    @keyframes flipInY {
-        from {
-            transform: perspective(400px) rotateY(-90deg);
-            opacity: 0;
-        }
-        50% {
-            transform: perspective(400px) rotateY(10deg);
-        }
-        to {
-            transform: perspective(400px) rotateY(0);
-            opacity: 1;
-        }
-    }
+.card-unique-2 .card-content {
+    color: #fff;
+    text-align: right;
+}
+
+.card-unique-2 img {
+    filter: grayscale(100%);
+}
+
+.card-unique-3 {
+    background: linear-gradient(135deg, #ff6f61, #de1d1d);
+}
+
+.card-unique-3 .card-content {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-unique-3 img {
+    opacity: 0.8;
+}
+
+.card-unique-4 {
+    background-color: #1d1d1d;
+}
+
+.card-unique-4 .card-content {
+    color: #c2c2c2;
+    font-style: italic;
+}
+
+.card-unique-4 img {
+    transform: rotate(-5deg);
+}
+
+.card-unique-5 {
+    background: radial-gradient(circle, #ffffff, #a0a0a0);
+}
+
+.card-unique-5 .card-content {
+    color: #000;
+    text-align: center;
+}
+
+.card-unique-5 img {
+    width: 100%;
+    height: auto;
+}

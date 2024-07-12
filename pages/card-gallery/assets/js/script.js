@@ -15,18 +15,5 @@ $(document).ready(function(){
             $('.dropdown-submenu ul').hide();
         }
     });
-
-    // Hide all card containers except the first one initially
-    $('.card-container').not('#card-page-1').hide();
 });
 
-function showPage(pageNumber) {
-    // Hide all card containers
-    $('.card-container').hide();
-
-    // Show the selected card container
-    var selectedHero = document.getElementById('card-page-' + pageNumber);
-    if (selectedHero) {
-        selectedHero.style.display = 'block';
-    }
-}
