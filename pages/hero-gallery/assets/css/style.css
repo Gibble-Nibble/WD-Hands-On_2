@@ -267,134 +267,134 @@ body {
 }
 
 /* Hero 2 Styles */
-.hero2 {
+:root {
+    --black: #252525;
+    --red: #ff0000;
+  }
+
+.hero2 h1{
+    color: white;
+}
+
+#hero2 {
+    background: var(--black)
+}
+
+#hero2  .container {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .hero2 {
     position: relative;
-    overflow: hidden;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background: var(--red);
     overflow: hidden;
-}
+    z-index: 1;
+  }
 
-#video-background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 5;
-}
-
-.gradient-mask {
+  .hero2::before {
+    content: "";
     position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.5));
-    z-index: 3;
-}
+    right: 0;
+    bottom: -100px;
+    height: 200px;
+    z-index: 1;
+    background: var(--black);
+    transform: skewY(-6deg);
+  }
 
-.hero2-content {
-    position: relative;
-    padding: 40px;
-    z-index: 4;
-}
+  .hero2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    color: var(--black);
+  }
 
-.hero2 h1 {
-    font-size: 3.5rem;
-    margin: 0;
-    padding: 0;
-}
+  section:not(.hero2) {
+    padding: 10vh 0;
+  }
 
-.hero2 p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-
-.hero2 .btn {
-    padding: 12px 32px;
-    background: #292929;
-    color: white;
+  section:not(.hero2) a {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 25px;
+    color: var(--black);
+    background: var(--red);
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background 0.3s ease;
-}
-
-.hero2 .btn:hover {
-    background: #000000;
-}
-
+  }
 
 /* Hero 3 Styles */
-.hero3 {
+:root {
+    --white: #fff;
+    --blue: #0069ff;
+}
+
+#hero3 {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+#hero3 .container {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+#hero3 .hero {
     position: relative;
-    width: 100%;
     height: 100vh;
-    background: linear-gradient(to top, #000000, #ffffff);
+    background: var(--blue);
+    z-index: 1;
+}
+
+#hero3 .hero::before,
+#hero3 .hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 150px;
+    z-index: 1;
+    background: var(--white);
+}
+
+#hero3 .hero::before {
+    left: 0;
+    clip-path: polygon(0 0, 0 100%, 90% 100%);
+}
+
+#hero3 .hero::after {
+    left: 90%;
+    clip-path: polygon(100% 0, 100% 100%, 10% 100%);
+}
+
+#hero3 .hero div {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
+    height: calc(100vh - 75px);
+    color: var(--white);
 }
 
-.hero3::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+section:not(#hero3 .hero) {
+    padding: 10vh 0;
 }
 
-.hero3-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-}
-
-.hero3-text {
-    padding: 20px;
-}
-
-.hero3 h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-.hero3 p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-.hero3 .btn {
-    padding: 10px 30px;
-    background: #ffffff;
-    color: #2a5298;
+section:not(#hero3 .hero) a {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 25px;
+    color: var(--white);
+    background: var(--blue);
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background 0.3s ease, color 0.3s ease;
 }
-
-.hero3 .btn:hover {
-    background: #2a5298;
-    color: #ffffff;
-}
-
 
 /* Hero 4 Section */
 .hero4-container {
